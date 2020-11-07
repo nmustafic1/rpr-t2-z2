@@ -65,6 +65,17 @@ public class Interval  {
     public static Interval intersect (Interval i1, Interval i2) {
         return i1.intersect(i2);
     }
+    @Override
+    public String toString() {
+        if (isNull()== true) return "()";
+        String s = new String();
+        if (pripadaPocetna == true) s= "[";
+        else s= "(";
+        s = s + pocetna + "," + krajnja;
+        if (pripadaKrajnja == true) s= s + "]";
+        else s= s + ")";
+        return s;
+    }
 
 
 
