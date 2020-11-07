@@ -36,6 +36,33 @@ public class Interval  {
             else presjek.pripadaKrajnja = false;
         }
 
+        else if (pocetna <= i.pocetna && krajnja <= i.krajnja) {
+            presjek.pocetna = i.pocetna;
+            presjek.krajnja = krajnja;
+            if (i.pripadaPocetna == true) presjek.pripadaPocetna = true;
+            else presjek.pripadaPocetna = false;
+            if (pripadaKrajnja == true) presjek.pripadaKrajnja = true;
+            else presjek.pripadaKrajnja = false;
+        }
+        else if (pocetna <= i.pocetna && krajnja >= i.krajnja) {
+            presjek.pocetna = i.pocetna;
+            presjek.krajnja = i.krajnja;
+            if (i.pripadaPocetna == true) presjek.pripadaPocetna = true;
+            else presjek.pripadaPocetna = false;
+            if (i.pripadaKrajnja == true) presjek.pripadaKrajnja = true;
+            else presjek.pripadaKrajnja = false;
+        }
+        else if (pocetna >= i.pocetna && krajnja >= i.krajnja) {
+            presjek.pocetna = pocetna;
+            presjek.krajnja = i.krajnja;
+            if (pripadaPocetna == true) presjek.pripadaPocetna = true;
+            else presjek.pripadaPocetna = false;
+            if (i.pripadaKrajnja == true) presjek.pripadaKrajnja = true;
+            else presjek.pripadaKrajnja = false;
+        }
+        return  presjek;
+    }
+
 
 
 }
