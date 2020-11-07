@@ -25,6 +25,16 @@ public class Interval  {
         if (pripadaKrajnja == true && krajnja == tacka) return  true;
         return  false;
     }
+    public Interval intersect(Interval i) {
+        Interval presjek = new Interval();
+        if (pocetna >= i.pocetna && krajnja <= i.krajnja) {
+            presjek.pocetna = pocetna;
+            presjek.krajnja = krajnja;
+            if (pripadaPocetna == true) presjek.pripadaPocetna = true;
+            else presjek.pripadaPocetna = false;
+            if (pripadaKrajnja == true) presjek.pripadaKrajnja = true;
+            else presjek.pripadaKrajnja = false;
+        }
 
 
 
