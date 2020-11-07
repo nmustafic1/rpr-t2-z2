@@ -62,6 +62,9 @@ public class Interval  {
         }
         return  presjek;
     }
+    public static Interval intersect (Interval i1, Interval i2) {
+        return i1.intersect(i2);
+    }
 
 
 
