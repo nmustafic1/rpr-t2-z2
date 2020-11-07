@@ -15,6 +15,10 @@ public class Interval  {
     public Interval () {
         pocetna = 0; krajnja = 0; pripadaKrajnja = false; pripadaPocetna = false;
     }
+    public boolean isNull () {
+        if (pocetna == 0 && krajnja == 0 && pripadaPocetna == false && pripadaKrajnja == false) return true;
+        return  false;
+    }
 
 
 
