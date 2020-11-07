@@ -19,6 +19,12 @@ public class Interval  {
         if (pocetna == 0 && krajnja == 0 && pripadaPocetna == false && pripadaKrajnja == false) return true;
         return  false;
     }
+    public boolean isIn (double tacka) {
+        if (tacka > pocetna && tacka < krajnja) return true;
+        if (pripadaPocetna == true && pocetna == tacka) return  true;
+        if (pripadaKrajnja == true && krajnja == tacka) return  true;
+        return  false;
+    }
 
 
 
