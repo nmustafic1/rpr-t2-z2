@@ -1,6 +1,15 @@
 package ba.unsa.etf.rpr.tutorijal02;
 
-public class Interval {
+import java.util.Objects;
 
+public class Interval  {
+    private double pocetna, krajnja;
+    private boolean pripadaPocetna, pripadaKrajnja;
+
+    public Interval  (double pocetnaTacka, double krajnjaTacka,
+                                                     boolean pripadaPocetna, boolean pripadaKrajnja) {
+        if (pocetnaTacka > krajnjaTacka) throw  new IllegalArgumentException("Pocetna tacka je veca od krajnje");
+        pocetna = pocetnaTacka; krajnja = krajnjaTacka; this.pripadaPocetna = pripadaPocetna; this.pripadaKrajnja = pripadaKrajnja;
+    }
 
 }
