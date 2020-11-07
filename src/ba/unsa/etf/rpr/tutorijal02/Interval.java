@@ -67,7 +67,7 @@ public class Interval  {
     }
     @Override
     public String toString() {
-        if (isNull()== true) return "()";
+        if (isNull()) return "()";
         String s = new String();
         if (pripadaPocetna == true) s= "[";
         else s= "(";
@@ -77,6 +77,16 @@ public class Interval  {
         return s;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Interval interval = (Interval) o;
+        return Double.compare(interval.pocetna, pocetna) == 0 &&
+                Double.compare(interval.krajnja, krajnja) == 0 &&
+                pripadaPocetna == interval.pripadaPocetna &&
+                pripadaKrajnja == interval.pripadaKrajnja;
+    }
 
 
 }
