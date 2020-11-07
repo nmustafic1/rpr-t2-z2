@@ -12,4 +12,10 @@ public class Interval  {
         pocetna = pocetnaTacka; krajnja = krajnjaTacka; this.pripadaPocetna = pripadaPocetna; this.pripadaKrajnja = pripadaKrajnja;
     }
 
+    public Interval () {
+        pocetna = 0; krajnja = 0; pripadaKrajnja = false; pripadaPocetna = false;
+    }
+
+
+
 }
